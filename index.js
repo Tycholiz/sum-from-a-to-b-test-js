@@ -1,10 +1,8 @@
-
-function sum(low, high) {
-  if (low + 1 === high) {
-    return low + high;
+const factorial = (low, high) => {
+  if (low > high) {
+    return 0;
   }
-  return sum(low, high - 1) + high;
+  return low + factorial(low + 1, high);
 }
-console.log(sum(2, 5));
 
-module.exports = sum;
+console.log(factorial(3, 4));
